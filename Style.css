@@ -1,0 +1,11 @@
+body {
+    width: 96%;
+    background-color: black;
+    margin: 10px auto;
+    color: antiquewhite;
+}
+
+.Mapgoogle {
+    width: 100%;
+    height: 300px;
+}
