@@ -9,3 +9,74 @@ body {
     width: 100%;
     height: 300px;
 }
+
+.Main {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    justify-content: center;
+}
+.SideBar {
+    min-width: 15%;
+    font-size: 26px;
+    display: flex;
+    flex-direction: column;
+}
+.SideBar a {
+    display: flex;
+    padding-left: 10%;
+    padding-top: 10%;
+}
+
+.MainBox {
+    padding-left: 10px;
+    padding-top: 1%;
+    text-align: center;
+    
+}
+.Buttons {
+    margin-left: -25%;
+}
+.Buttons button {
+    padding: 1em;
+    background-color: gainsboro;
+    margin: 0 10px;
+    border-radius: 10%;
+    
+}
+
+.MainView {
+    display: block;
+    /*to respons*/
+    width: 1024px;
+}
+.MainView img {
+    max-width: 30%;
+    margin: 10px;
+    float: left;
+}
+.MainView p {
+    float: none;
+    width: 70%;
+    font-size: 26px;
+}
+.JsView {
+    display: block;
+    float: left;
+    text-align: left;
+    margin: 10px 0px;
+    height: 220px;
+    width: 33%;
+}
+#form {
+    display: none;
+    font-size: 24px;
+    justify-content: space-around;
+}
+#SideBarView {
+    float: left;
+}
+
+
