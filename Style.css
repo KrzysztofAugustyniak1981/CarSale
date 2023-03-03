@@ -17,6 +17,7 @@ body {
 .row {
     display: flex;
     justify-content: center;
+    padding-top: 1%;
 }
 .SideBar {
     min-width: 15%;
@@ -28,6 +29,10 @@ body {
     display: flex;
     padding-left: 10%;
     padding-top: 10%;
+}
+a:hover {
+    border: 2px solid darkgray;
+    cursor: pointer;
 }
 
 .MainBox {
@@ -44,7 +49,9 @@ body {
     background-color: gainsboro;
     margin: 0 10px;
     border-radius: 10%;
-    
+}
+.Buttons button:hover {
+    cursor: pointer;
 }
 
 .MainView {

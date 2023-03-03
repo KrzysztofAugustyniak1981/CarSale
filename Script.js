@@ -21,6 +21,7 @@ var sale = [
 let MarkaNoReapet = [];
 let Mark = [];
 let NadwozieNR = [];
+let RocznikNR = [];
 let length = sale.length;
 let Mlength = MarkaNoReapet.length;
 let Nlength = NadwozieNR.length;
@@ -64,7 +65,7 @@ function WizytaView() {
 
 function Marka() {
   let i = length - 1;
-  document.getElementById("SideBar").innerHTML = "Dostępne Marki:";
+  document.getElementById("SideBar").innerHTML = "";
   MarkaCount()
   function MarkaCount() {
     if (i > -1) {
@@ -81,7 +82,7 @@ function Marka() {
   MarkView()
   function MarkView() {
     if (a > -1) {
-    document.getElementById("SideBar").innerHTML += '<h4>' + MarkaNoReapet[a] + '</h4>';
+    document.getElementById("SideBar").innerHTML += '<a id="' + MarkaNoReapet[a] + '" onclick="ViewMarka()"><h4>' + MarkaNoReapet[a] + '</h4></a>';
     a --;
     MarkView();
   }};
@@ -94,7 +95,7 @@ function Nadwozia() {
   function NadwozieCount() {
     if (i > -1) {
       NadwozieNR.push(sale[i][0]);
-      i--
+      i--;
       NadwozieCount();
     }
   };
@@ -106,10 +107,35 @@ function Nadwozia() {
   MarkView()
   function MarkView() {
     if (a > -1) {
-    document.getElementById("SideBar").innerHTML += '<h4>' + NadwozieNR[a] + '</h4>';
+    document.getElementById("SideBar").innerHTML += '<a id="' + NadwozieNR[a] + '" onclick="ViexNadwozia()"><h4>' + NadwozieNR[a] + '</h4></a>';
     a --;
     MarkView();
   }};
+};
+function Rocznik() {
+  let i = length -1;
+  document.getElementById("SideBar").innerHTML = "";
+  RocznikCount();
+  function RocznikCount () {
+    if (i > -1) {
+      RocznikNR.push(sale[i][1]);
+      i--;
+      RocznikCount();
+    }
+  };
+  let uniqueSet = new Set(RocznikNR);
+  RocznikNR = [...uniqueSet];
+  RocznikNR.sort();
+  RocznikNR.reverse();
+  let a = RocznikNR.length -1;
+  RocznikView()
+  function RocznikView() {
+    if (a > -1) {
+      document.getElementById("SideBar").innerHTML += '<a id="' + RocznikNR[a] + '" onclick="ViewRocznik()"><h4>' + RocznikNR[a] + '</h4></a>';
+      a --;
+      RocznikView();
+    }
+  }
 }
 
 function clear() {
