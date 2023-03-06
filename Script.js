@@ -27,6 +27,7 @@ let Mlength = MarkaNoReapet.length;
 let Nlength = NadwozieNR.length;
 
 
+
 function OffertView() {
   let i = length - 1;
   clear();
@@ -82,7 +83,7 @@ function Marka() {
   MarkView()
   function MarkView() {
     if (a > -1) {
-    document.getElementById("SideBar").innerHTML += '<a id="' + MarkaNoReapet[a] + '" onclick="ViewMarka()"><h4>' + MarkaNoReapet[a] + '</h4></a>';
+    document.getElementById("SideBar").innerHTML += '<a id="' + MarkaNoReapet[a] + '" onclick="ViewMarka(this.id)"><h4>' + MarkaNoReapet[a] + '</h4></a>';
     a --;
     MarkView();
   }};
@@ -107,7 +108,7 @@ function Nadwozia() {
   MarkView()
   function MarkView() {
     if (a > -1) {
-    document.getElementById("SideBar").innerHTML += '<a id="' + NadwozieNR[a] + '" onclick="ViexNadwozia()"><h4>' + NadwozieNR[a] + '</h4></a>';
+    document.getElementById("SideBar").innerHTML += '<a id="' + NadwozieNR[a] + '" onclick="VievNadwozia(this.id)"><h4>' + NadwozieNR[a] + '</h4></a>';
     a --;
     MarkView();
   }};
@@ -131,9 +132,90 @@ function Rocznik() {
   RocznikView()
   function RocznikView() {
     if (a > -1) {
-      document.getElementById("SideBar").innerHTML += '<a id="' + RocznikNR[a] + '" onclick="ViewRocznik()"><h4>' + RocznikNR[a] + '</h4></a>';
+      document.getElementById("SideBar").innerHTML += '<a id="' + RocznikNR[a] + '" onclick="ViewRocznik(this.id)"><h4>' + RocznikNR[a] + '</h4></a>';
       a --;
       RocznikView();
+    }
+  }
+}
+function VievNadwozia(ClickedId) {
+  let i = length - 1;
+  clear();
+  OffertViewNadwozia();
+  function OffertViewNadwozia(Id) {
+    let temp = sale[i][0];
+    let result = ClickedId.localeCompare(temp);
+    if (i > -1 && result == 0) {
+      document.getElementById("AboutUs").innerHTML +=
+        '<div class="JsView"><h2>' +
+        sale[i][2] +
+        '</h2><img src="/Image/' +
+        sale[i][3] +
+        '"><p>' +
+        sale[i][1] +
+        "<br>" +
+        sale[i][2] +
+        "</br></p></div>";
+      i--;
+      OffertViewNadwozia();
+  } else {
+    i--;
+    OffertViewNadwozia();
+  }
+  }
+}
+function ViewRocznik(ClickedId,) {
+  let i = length - 1;
+  clear();
+  OffertViewRocznik();
+  function OffertViewRocznik() {
+    let temp = sale[i][1];
+    let result = ClickedId.localeCompare(temp);
+    if (i>-1 && result == 0) {
+      document.getElementById("AboutUs").innerHTML +=
+        '<div class="JsView"><h2>' +
+        sale[i][2] +
+        '</h2><img src="/Image/' +
+        sale[i][3] +
+        '"><p>' +
+        sale[i][1] +
+        "<br>" +
+        sale[i][2] +
+        "</br></p></div>";
+      i--;
+      OffertViewRocznik();
+    }
+    else {
+      i--;
+      OffertViewRocznik();
+    }
+  }
+}
+
+function ViewMarka(ClickedId,) {
+  let i = length - 1;
+  clear();
+  OffertViewMarka();
+  function OffertViewMarka() {
+    let temp = sale[i][2];
+    let result = ClickedId.localeCompare(temp);
+    if (i>-1 && result == 0) {
+      document.getElementById("AboutUs").innerHTML +=
+        '<div class="JsView"><h2>' +
+        sale[i][2] +
+        '</h2><img src="/Image/' +
+        sale[i][3] +
+        '"><p>' +
+        sale[i][1] +
+        "<br>" +
+        sale[i][2] +
+        "</br></p></div>";
+      i--;
+      OffertViewMarka();
+    }
+    else {
+      i--;
+      OffertViewMarka();
     }
   }
 }

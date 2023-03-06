@@ -1,13 +1,14 @@
 body {
-    width: 96%;
+    width: 90%;
     background-color: black;
     margin: 10px auto;
     color: antiquewhite;
 }
 
 .Mapgoogle {
-    width: 100%;
+    width: 96%;
     height: 300px;
+    margin: auto;
 }
 
 .Main {
