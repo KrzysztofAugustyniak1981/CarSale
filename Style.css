@@ -1,8 +1,15 @@
 body {
     width: 90%;
-    background-color: black;
-    margin: 10px auto;
-    color: antiquewhite;
+    height: 100%;
+    margin: 0px auto;
+    padding: 10px 0;
+    color: black;
+    background: rgb(240,249,255);
+    background: -moz-linear-gradient(top,  rgb(240,249,255) 0%, rgb(203,235,255) 47%, rgb(161,219,255) 100%);
+    background: -webkit-linear-gradient(top,  rgb(240,249,255) 0%,rgb(203,235,255) 47%,rgb(161,219,255) 100%);
+    background: linear-gradient(to bottom,  rgb(240,249,255) 0%,rgb(203,235,255) 47%,rgb(161,219,255) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=0 );
+
 }
 
 .Mapgoogle {
