@@ -55,7 +55,7 @@ function KontaktView() {
   clear();
   document.getElementById("AboutUs").innerHTML +='<div class="JsView"><h2>Salon Samochodowy</h2><img src="/Image/Parking.jpg">';
   document.getElementById("AboutUs").innerHTML +='<div class="JsView"><h2>Telefon 123-123-123</h2>';
-  document.getElementById("AboutUs").innerHTML +='<div class="JsView"><h2>E-mail: salon@samochodowy.com</h2>';
+  document.getElementById("AboutUs").innerHTML +='<div class="JsView"><h2>E-mail: salon@ samochodowy.com</h2>';
   
 }
 

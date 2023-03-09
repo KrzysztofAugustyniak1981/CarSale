@@ -94,4 +94,76 @@ a:hover {
     float: left;
 }
 
+/*Responsive*/
 
+@media (max-width: 1024px) {
+    .Mapgoogle {
+        height: 200px;
+    }
+    .SideBar {
+        max-width: 160px;
+        font-size: 14px;
+        padding: 0px;
+        
+    }
+    .MainBox {
+        max-width: 580px;
+    }
+    .SideBar a {
+        padding-left: 5px;
+        padding-top: 5px;
+        display: contents;
+    }
+    .Buttons {
+        margin: 3px auto;
+    }
+    .MainView {
+        width: 580px;
+        font-size: 11px;
+        min-height: 350px;
+    }
+    .MainView p {
+        width: 90%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Mapgoogle {
+        height: 250px;
+    }
+    .SideBar {
+        max-width: 140px;
+        font-size: 14px;
+        padding: 0px; 
+    }
+    .MainBox {
+        max-width: 430px;
+    }
+    .MainView {
+        width: 100%;
+        font-size: 10px;
+        min-height: 580px;
+    }
+    
+}
+@media (max-width: 736px) {
+    .Mapgoogle {
+        height: 174px;
+    }
+}
+@media (max-width: 412px) {
+    .SideBar {
+        display: none;
+    }
+    .MainBox {
+        padding: 2px;
+        max-width: 412px;
+    }
+    .MainView {
+        min-height: 380px;
+    }
+    .JsView {
+        height: 100px;
+    }
+}
